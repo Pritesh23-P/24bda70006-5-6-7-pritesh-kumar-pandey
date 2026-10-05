@@ -302,3 +302,31 @@ The test suite validates:
 - AES-256-GCM symmetric encryption and decryption correctness
 - Authentication and JWT token issuance and signature validation
 - Post creation, validation constraints, and Caffeine cache integration
+
+---
+
+## 9. Deployment Guide (GitHub, Vercel & Cloud)
+
+### A. Pushing to GitHub
+1. Create a new repository on [GitHub](https://github.com/new).
+2. Link your local repository and push:
+   ```powershell
+   git remote add origin https://github.com/<YOUR_USERNAME>/<REPO_NAME>.git
+   git branch -M main
+   git push -u origin main
+   ```
+
+### B. Deploying Frontend to Vercel
+The repository includes a root `vercel.json` pre-configured to deploy the light theme Single Page Application from `src/main/resources/static`:
+1. Import your GitHub repository on [Vercel Dashboard](https://vercel.com/new).
+2. Framework Preset: **Other**.
+3. Root Directory: `./` (Vercel automatically detects `vercel.json` and routes to the static assets).
+4. Click **Deploy**.
+
+### C. Deploying Spring Boot Backend (Docker / Render / Railway)
+To host the backend API alongside your Vercel frontend:
+1. Use the included multi-stage `Dockerfile`.
+2. Connect your GitHub repository to [Render](https://render.com) or [Railway](https://railway.app).
+3. Select **Docker** as the deployment environment.
+4. Set the port to `8080`.
+
