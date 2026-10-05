@@ -1,12 +1,19 @@
 {
   "version": 2,
-  "outputDirectory": "src/main/resources/static",
   "cleanUrls": true,
   "trailingSlash": false,
   "routes": [
     {
+      "src": "/css/(.*)",
+      "dest": "/src/main/resources/static/css/$1"
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "/src/main/resources/static/js/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/src/main/resources/static/$1"
+      "dest": "/src/main/resources/static/index.html"
     }
   ]
 }
