@@ -1,9 +1,8 @@
 {
   "name": "spring-boot-integrated-platform",
   "version": "1.0.0",
-  "description": "Enterprise Spring Boot Platform with Light Theme SPA",
   "private": true,
   "scripts": {
-    "build": "echo 'Static assets ready for deployment'"
+    "build": "echo 'Static build complete'"
   }
 }
